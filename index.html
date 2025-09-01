@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>To‑Do List </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<div class="card" role="application" aria-labelledby="title">
+<header>
+<div class="logo">TD</div>
+<div>
+<h1 id="title">To‑Do List</h1>
+<p class="lead">Add tasks, mark complete, edit, reorder, and everything saves in your browser.</p>
+</div>
+</header>
+
+
+<form id="addForm" class="add-row" onsubmit="return false;">
+<input id="taskInput" class="input" placeholder="Add a new task and press Enter" autocomplete="off" />
+<button id="addBtn" class="btn">Add</button>
+</form>
+
+
+<div class="toolbar">
+<div class="filters" role="tablist">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="active">Active</button>
+<button class="filter" data-filter="completed">Completed</button>
+</div>
+
+
+<input id="search" class="search" placeholder="Search tasks…" />
+<div class="meta" id="meta">0 tasks • 0 done</div>
+</div>
+<ul id="list" class="list" aria-live="polite"></ul>
+
+
+<div id="empty" class="empty" hidden>No tasks yet — add your first one!</div>
+
+
+<footer>
+<button id="toggleAll" class="btn ghost">Mark all done</button>
+<button id="clearCompleted" class="btn ghost">Clear completed</button>
+<div class="tip">Tip: Double‑click to edit • Drag to reorder</div>
+</footer>
+</div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
